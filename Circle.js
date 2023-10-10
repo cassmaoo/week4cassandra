@@ -3,7 +3,6 @@ class Circle {
 
   // Constructor 
   constructor(x, y, circleColor) {
-
     // Constructors of the circles' properties
     this.pos = createVector(x, y);
     this.radius = random(10, 60);
@@ -23,12 +22,12 @@ class Circle {
     this.pos.add(this.vel);
 
     // Make circles bounce off the edges of the canvas
-    // width
+    // Width
     if (this.pos.x > width - this.radius || this.pos.x < this.radius) {
       this.vel.x *= -1;
     }
 
-    // height
+    // Height
     if (this.pos.y > height - this.radius || this.pos.y < this.radius) {
       this.vel.y *= -1;
     }
@@ -40,7 +39,6 @@ class Circle {
         let minDistance = this.radius + other.radius;
 
         if (distance < minDistance) {
-
           // Change color on collision
           this.color = color(random(255), random(255), random(255));
           other.color = color(random(255), random(255), random(255));
